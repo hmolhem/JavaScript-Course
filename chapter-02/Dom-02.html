@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #btn{
+            color: white;
+            background-color: #4caf50;
+            border: none;  
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        #username, #password{
+            padding: 10px 20px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Course</h1>
+    <h2>This DOM subject</h2>
+    <div class="form">
+        <form action="" onsubmit="submitForm(event)">
+            <!-- <label for="username">User Name:</label> -->
+            <input type="text" name="username" id="username" placeholder="User Name" value="">
+            <br>
+            <!-- <label for="password"> Password:</label> -->
+            <input type="password" name="password" id="password" placeholder="password" value="">
+            <br>
+            <input type="submit" value="Submit form" id="btn" onclick="showElementBytag(event)">
+        </form>
+
+    </div>
+<script src="DOM-02.js"></script>
+</body>
+</html>
