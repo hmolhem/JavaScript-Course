@@ -1,8 +1,9 @@
-var counter = 0;
+let counter = 1;
+let countInterval;
 const btnStart = document.getElementById('start');
 const btnStop = document.getElementById('stop');
 const btnReset = document.getElementById('reset');
-const txt = document.getElementsByTagName('p')[0];
+let txt = document.getElementsByTagName('p')[0];
 
 
 var init = function(){
@@ -11,5 +12,19 @@ var init = function(){
 };
 
 btnStart.onclick = () =>{
-    txt.innerHTML = counter++;
+    countInterval = setInterval(function(){
+        txt.innerHTML = counter++;
+    },1000);
+    btnStart.disabled = true;
+    btnStop.disabled = false;
+    btnReset.disabled = false;
+};
+btnStop.onclick = () =>{
+    clearInterval(countInterval);
+    btnStop.disabled = true;
+    btnReset.disabled = true;
+    btnStart.disabled = false;
+};
+btnReset.onclick = () =>{
+
 };
