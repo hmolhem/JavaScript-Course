@@ -5,13 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Const in JavaScript</title>
+    <style>
+        .container{
+            margin-left: 30px;
+        }
+        .container p{
+            color: crimson;
+            font-size: 25px;
+        }
+        input[type=text]{
+            width : 180px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 30px;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            outline: none;
+            padding: 12px 20px;
+        }
+        input[type=text]:focus {
+                border: 3px solid rgb(255, 139, 139);
+        }
+        .container label{
+            font-size: 30px;
+        }
+        input[type=button]{
+            width: 180px;
+            height: 50px;
+            font-size: 20px;
+            margin-left: 138px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>JavaScript Course</h1>
-        <h2>Whts is the const in JavaScript</h2>
-        <p class="var">x</p>
-        <p class="const">y</p>
+        <h2>Whats is the const in JavaScript</h2>
+        <form action="">
+        <p class="var">X  is a variable type</p>
+        <label for="variable">change x :</label>
+        <input type="text" name="variable" id="variable" value="10">
+
+        <p class="const">Y is a const type</p>
+        <label for="variable">change y :</label>
+        <input type="text" name="const" id="const" value="20">
+        <br><br>
+        <input type="button" id="submit" value="change & click">
+        <p class="message">y</p>
+    </form>
+    <br>
+             
     </div>
     <script src="./const-01.js"></script>
 </body>
