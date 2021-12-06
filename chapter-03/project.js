@@ -1,12 +1,14 @@
-var maxCounter = 10;
+var maxCounter = 120;
+const saveMaxCounter = maxCounter;
 var countInterval;
 var btnStart = document.getElementById('start');
 var btnStop = document.getElementById('stop');
 var btnReset = document.getElementById('reset');
-let txt = document.getElementsByTagName('p')[0];
+var txt = document.getElementsByTagName('p')[0];
 
 
 let onloadInit = function(){
+    
     btnStop.disabled = true;
     btnReset.disabled= true;
     
@@ -16,19 +18,32 @@ let onloadInit = function(){
     document.getElementById("progress").max = maxCounter;
 };
 
+let divideNumbertoMinuteAndSecond = function(number){
+    if (number<0){
+        clearInterval(countInterval);
+        btnReset.onclick();
+    }else{
+        let mitutePart = Math.floor(number / 60).toString();
+        let secondPart = (number % 60).toString();
+        mitutePart = (mitutePart.length == 1) ? "0".concat(mitutePart): mitutePart;
+        secondPart = (secondPart.length == 1) ? "0".concat(secondPart): secondPart;
+        return [mitutePart, secondPart ];
+    }
+};
 
 btnStart.onclick = () =>{
         countInterval = setInterval(function(){
+        maxCounter--;
         Cookies.set('currentCount',maxCounter);
         portionTimeArray = divideNumbertoMinuteAndSecond(maxCounter);
         txt.innerHTML = portionTimeArray[0] + ":" + portionTimeArray[1];
-        maxCounter--;
+        document.getElementById("progress").value = maxCounter;
         if (maxCounter == 0){
             clearInterval(countInterval);
+            btnReset.onclick();
         }
     },1000);
     Cookies.set('state','started');
-    document.getElementById("progress").value = maxCounter;
     btnStart.disabled = true;
     btnStop.disabled = false;
     btnReset.disabled = false;
@@ -42,35 +57,25 @@ btnStop.onclick = () =>{
     btnStop.disabled = true;
     btnReset.disabled = true;
     btnStart.disabled = false;
-    console.log(maxCounter);
 };
 
 btnReset.onclick = () =>{
     clearInterval(countInterval);
-
+    let diff= saveMaxCounter - maxCounter;
+    maxCounter += diff;
     let portionTimeArray = divideNumbertoMinuteAndSecond(maxCounter);
     txt.innerHTML = portionTimeArray[0] + ":" + portionTimeArray[1];
     
     document.getElementById("progress").value = maxCounter;
     document.getElementById("progress").max = maxCounter;    
 
-    Cookies.set('newNumber',maxCounter);
+    Cookies.set('currentCount',maxCounter);
     Cookies.set('state','stoped');
 
     btnStop.disabled = true;
     btnReset.disabled = true;
     btnStart.disabled = false;
-};
-
-let divideNumbertoMinuteAndSecond = function(number){
-    let mitutePart = Math.floor(number / 60).toString();
-    let secondPart = (number % 60).toString();
-    mitutePart = (mitutePart.length == 1) ? "0".concat(mitutePart): mitutePart;
-    secondPart = (secondPart.length == 1) ? "0".concat(secondPart): secondPart;
-    return [mitutePart, secondPart ];
-};
 
 
-let isEqual2Number = () =>{
-    return (timeleft == myNumber) ? true : false;
 };
+
