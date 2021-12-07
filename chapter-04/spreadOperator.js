@@ -29,3 +29,13 @@ let t = [1,2,3];
 let s = [...t];
 console.log('t :', t);
 console.log('s :', s);
+
+
+//rest as parameter
+
+add = (a,b,c, ...rest) => {
+    console.log(rest);
+    return a + b + c;
+};
+
+console.log(add(1,2,3,4,5,6,7,8,9));
