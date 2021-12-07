@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .title{
+            color: rgb(255, 255, 255);
+            background-color: rgb(115, 115, 255);
+            display: inline-block;
+            width: 100%;
+            border-radius: 3px;
+            text-align: center;
+
+        }
+        .main{
+            background-color: rgb(216, 216, 216);
+            width: 100%;
+            border-radius: 3px;
+            text-align: center;
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:space-around;
+        }
+        
+        .main .item {
+            width: 15%;
+        }
+        .main .item h1 {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+        .message{
+            color: rgb(255, 255, 255);
+            background-color: rgb(115, 115, 255);
+            display: inline-block;
+            width: 100%;
+            border-radius: 3px;
+            text-align: center;
+        }
+        .btns{
+            background-color: rgb(216, 216, 216);
+            width: 100%;
+            border-radius: 3px;
+            text-align: center;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+        }
+        .btns .btn{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 20px;
+            width: 150px;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>JavaScript Course.</h1>
+            <h2>Rock Papaer Scisser</h2>
+        </div>
+        <div class="main">
+            <div class="item">
+                <h2>User Score</h2>
+                <hr>
+                <h1>0</h1>
+            </div>
+            <div class="item">
+                <h2>Computer Score</h2>
+                <hr>
+                <h1>0</h1>
+            </div>
+
+        </div>
+        <div class="message">               
+            <h1>Select your move</h1>
+            <h4>Number of movements</h2>
+            <p>You Won</p>
+        </div>
+        <div class="btns">
+            <button class="btn" type="submit">Rock</button>
+            <button class="btn" type="submit">Paper</button>
+            <button class="btn" type="submit">Scisser</button>
+        </div>
+    </div>
+    <script src="./project.js"></script>
+</body>
+</html>
