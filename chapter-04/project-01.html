@@ -15,16 +15,11 @@
         }
         .title{
             color: rgb(255, 255, 255);
-            background-color: rgb(120, 120, 255);
+            background-color: #198754;
             width: 100%;
             border-radius: 3px;
             text-align: center;
             height: 150px;
-
-            display: flex; 
-            flex-direction: column;     
-            align-items: center;
-            justify-content: center;
         }
         .scoreBar{
             background-color: rgb(220, 220, 220);
@@ -41,17 +36,10 @@
         }
         .messageBar{
             color: rgb(255, 255, 255);
-            background-color: rgb(120, 120, 255);
+            background-color: #198754;
             width: 100%;
             border-radius: 3px;
             text-align: center;
-
-            height: 260px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 150px;
         }
 
         .buttonsBar{
@@ -73,6 +61,10 @@
         .scoreBar .item h1 {
             background-color: #fff;
             border-radius: 3px;
+        }
+        .messageBar #whatWon{
+            color:rgb(255, 153, 153);
+            font-size: xx-large;
         }
         .buttonsBar .item{
             font-size: 20px;
@@ -96,26 +88,20 @@
         <div class="scoreBar">
             <div class="item">
                 <h2>User Score</h2>
-                <hr>
                 <h1 id="playerscore">0</h1>
             </div>
             <div class="item">
                 <h2>Computer Score</h2>
-                <hr>
                 <h1 id="computerscore">0</h1>
             </div>
         </div>
 
         <!-- Message Bar -->
         <div class="messageBar">               
-            <h1>Choose your move</h1>
-            <h2 id="numbermove"></h2>
-            <h2 id="counter"></h2>
-            <h2 id="whatWon">Click & start</h2>
-        <div class="message">               
-            <h1>Choose your move</h1>
-            <h4 id="numbermove"></h2>
-            <p id="whatWon"></p>
+            <h2>Choose your move</h2>
+            <h3 id="numbermove"></h3>
+            <h3 id="counter">Conter</h3>
+            <h3 id="whatWon">Click & start</h3>
         </div>
 
         <!-- Buttons Bar -->
@@ -124,9 +110,7 @@
             <button class="item" id="paper" type="submit">Paper</button>
             <button class="item" id="scisser" type="submit">Scisser</button>
         </div>
-
-        
     </div>
-    <script src="./project.js"></script>
+    <script src="./project-01.js"></script>
 </body>
 </html>

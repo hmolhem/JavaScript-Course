@@ -20,34 +20,13 @@ var rpsModule = function(){
         PLAYER_WON_MESSAGE: "Congratulations You Won The Game",
         PLAYER_LOSE_MESSAGE: "Sorry, You Lose The Game",
         PLAYER_WON: 'Player Won',
-        GAME_OVER: "Game Over!",
+        GAME_OVER: "Game is Over!",
         COMPUTER_WON: 'Computer Won',
         COMPUTER_WON_MESSAGE: 'Oh shit!',
         TIE: 'Tie',
         TIE_MSSAGE: 'No Lose, No Won.!'
     };
-    // Caching DOM
-    var userScore = document.getElementById('userscore');
-    var computerScore = document.getElementById('computerscore');
-    var numberMove = document.getElementById('numbermove');
     
-    // 1: set variable for buttons control
-    var rockBtn = document.getElementById('rock');
-    var paperBtn = document.getElementById('paper');
-    var scisserBtn = document.getElementById('scisser');
-
-    var whatWon = document.getElementById('whatWon');
-    
-    // some string tha would be use
-    const usefulString = {
-        YOU_WON_THE_GAMR: "Congratulations You Won The Game",
-        YOU_LOST_THE_GAME: "You Lost The Game",
-        GAME_OVER: "Game Over!",
-        USER_WIN: 'Player Won',
-        COMPUTER_WIN: 'Computer Won',
-        TIE: 'Tie'
-    };
-
     const RPS = {
         '1':'rock',
         '2':'paper',
@@ -71,17 +50,14 @@ var rpsModule = function(){
         let computer = computerGenerate();
         let player = 'rock'.toLocaleLowerCase();
         if (isTerminate()){
-            rockBtn.disabled = true;
-            paperBtn.disabled = true;
-            scisserBtn.disabled = true;
             setWhoWon(scoreGame());
             terminate();
+            btnsDisabled();
         }else{
             let key = whoWon(player,computer);
             switch (key) {
                 case 'player':
                         // player won 
-                        
                         updateCounter();
                         updatePlayerScore();
                         setWhoWon(usefullString.PLAYER_WON);
@@ -109,11 +85,9 @@ var rpsModule = function(){
         let computer = computerGenerate();
         let player = 'paper'.toLocaleLowerCase();
         if (isTerminate()){
-            rockBtn.disabled = true;
-            paperBtn.disabled = true;
-            scisserBtn.disabled = true;
             setWhoWon(scoreGame());
             terminate();
+            btnsDisabled();
         }else{
             let key = whoWon(player,computer);
             switch (key) {
@@ -145,11 +119,9 @@ var rpsModule = function(){
         let computer = computerGenerate();
         let player = 'scisser'.toLocaleLowerCase();
         if (isTerminate()){
-            rockBtn.disabled = true;
-            paperBtn.disabled = true;
-            scisserBtn.disabled = true;
             setWhoWon(scoreGame());
             terminate();
+            btnsDisabled();
         }else{
             let key = whoWon(player,computer);
             switch (key) {
@@ -232,9 +204,6 @@ var rpsModule = function(){
         }
     }
 
-    function numberPlay(){
-        whoWonText.innerHTML = maximumPlay;
-    }
 
     function updatePlayerScore(){
         setPlayerScore(counterScore.PLAYER++);
@@ -292,49 +261,20 @@ var rpsModule = function(){
         }
 
     });
-    paperBtn.addEventListener('click', function(){
-
-    });
-
-    scisserBtn.addEventListener('click', function(){
-
-    });
 
     function setUserScore (score) {
         userScore.innerHTML = score;
     }
+
+    function btnsDisabled () {
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scisserBtn.disabled = true;
+    }
+
     
-    function setComputerScore(score) {
-        computerScore.innerHTML = score;
-    }
     
-    function setMovement(neumeral) {
-        numberMove.innerHTML = 'Number of movements'.concat(' : ',neumeral);
-    }
 
-    function setWhoWon(str){
-        whatWon.innerHTML = str;
-    }
-
-    function rnd(){
-        return 1 + Math.floor(Math.random() * 3);
-    }
-
-    function computerGenerate (){
-        let  keyRPS = rnd();
-        return [keyRPS, RPS[keyRPS].toLocaleLowerCase()];
-    }
-
-    function whoWon(u,c){
-        if (u > c ){
-            key = 1;
-        } else if (u < c){
-            key = 2;
-        }else {
-            key = 3;
-        }
-        return key;
-    }
     // Define Public Method
     
     return {
