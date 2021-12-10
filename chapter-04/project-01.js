@@ -262,10 +262,6 @@ var rpsModule = function(){
 
     });
 
-    function setUserScore (score) {
-        userScore.innerHTML = score;
-    }
-
     function btnsDisabled () {
         rockBtn.disabled = true;
         paperBtn.disabled = true;
