@@ -4,96 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
     <style>
         .container{
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .title{
             color: rgb(255, 255, 255);
-            background-color: rgb(115, 115, 255);
-            display: inline-block;
+            background-color: rgb(120, 120, 255);
             width: 100%;
             border-radius: 3px;
             text-align: center;
-
+            height: 150px;
+            display: flex; 
+            flex-direction: column;     
+            align-items: center;
+            justify-content: center;
         }
-        .main{
-            background-color: rgb(216, 216, 216);
+        .scoreBar{
+            background-color: rgb(220, 220, 220);
             width: 100%;
             border-radius: 3px;
             text-align: center;
             
+            height: 150px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content:space-around;
+            align-items: center;
         }
-        
-        .main .item {
-            width: 15%;
-        }
-        .main .item h1 {
-            background-color: #fff;
-            border-radius: 3px;
-        }
-        .message{
+        .messageBar{
             color: rgb(255, 255, 255);
-            background-color: rgb(115, 115, 255);
-            display: inline-block;
+            background-color: rgb(120, 120, 255);
             width: 100%;
             border-radius: 3px;
             text-align: center;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .btns{
-            background-color: rgb(216, 216, 216);
+
+        .buttonsBar{
+            background-color: rgb(220, 220, 220);
             width: 100%;
             border-radius: 3px;
-            text-align: center;
             
+            height: 150px;
             display: flex;
             flex-direction: row;
             justify-content:center;
+            align-items: flex-end;
         }
-        .btns .btn{
+
+        .scoreBar .item {
+            width: 15%;
+        }
+        .scoreBar .item h1 {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+        .buttonsBar .item{
             font-size: 20px;
             font-weight: bold;
-            margin: 30px 20px;
+            margin: 40px 20px;
             width: 150px;
+            height: 50px;
         }
         
         </style>
 </head>
 <body>
     <div class="container">
+        <!-- Title Bar -->
         <div class="title">
-            <h1>JavaScript Course.</h1>
-            <h2>Rock Papaer Scisser</h2>
+            <h1>JavaScript Project Course.</h1>
+            <h1>Rock Papaer Scisser</h1>
         </div>
-        <div class="main">
+
+        <!-- score Bar -->
+        <div class="scoreBar">
             <div class="item">
                 <h2>User Score</h2>
                 <hr>
-                <h1 id="userscore">0</h1>
+                <h1 id="playerscore">0</h1>
             </div>
             <div class="item">
                 <h2>Computer Score</h2>
                 <hr>
                 <h1 id="computerscore">0</h1>
             </div>
+        </div>
 
+        <!-- Message Bar -->
+        <div class="messageBar">               
+            <h1>Choose your move</h1>
+            <h2 id="numbermove"></h2>
+            <h2 id="counter"></h2>
+            <h2 id="whatWon">Click & start</h2>
         </div>
-        <div class="message">               
-            <h1>Select your move</h1>
-            <h4 id="numbermove">Number of movements</h2>
-            <p id="whatWon"></p>
+
+        <!-- Buttons Bar -->
+        <div class="buttonsBar">
+            <button class="item" id="rock" type="submit">Rock</button>
+            <button class="item" id="paper" type="submit">Paper</button>
+            <button class="item" id="scisser" type="submit">Scisser</button>
         </div>
-        <div class="btns">
-            <button class="btn" id="rock" type="submit">Rock</button>
-            <button class="btn" id="paper" type="submit">Paper</button>
-            <button class="btn" id="scisser" type="submit">Scisser</button>
-        </div>
+
+        
     </div>
     <script src="./project.js"></script>
 </body>
