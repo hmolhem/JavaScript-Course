@@ -1,3 +1,4 @@
+
 var maxCounter = 120;
 const saveMaxCounter = maxCounter;
 var countInterval;
