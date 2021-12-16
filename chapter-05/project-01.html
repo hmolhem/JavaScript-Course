@@ -4,52 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./project-01-assets/style.css">
+    <link rel="stylesheet" href="./project-01-assets/reset.css">
+    <link rel="stylesheet" href="./project-01-assets/style.css">
 
     <title>Flash Card</title>
 </head>
 <body>
 
-    <div class="containter success" id="header">
-        <div class="nav">
+    <div class="container header success" id="header">
+        <div class="logo header-item-1">
             <h1>Flashcards</h1>
-            <div>
-                <button class="button" type="submit">New Card</button>
-                <button class="button" type="submit">Delete Card</buttont>
-            </div>
+        </div>
+        <div class="buttons header-item-2">
+            <button class="button" type="submit">New Card</button>
+            <button class="button" type="submit">Delete Card</buttont>
         </div>
     </div>
     
     
     <!-- create Box -->
     
-    <div class="container" id="box">
-        <div class="create-box">
-            <div>
-                <h1>Create Box</h1>
-            </div>
-            <div>
-                <label for="question" style="font-size: 20px; font-weight: bold;">Question</label>
-                <textarea name="question" id="question" cols="30" rows="2"></textarea>    
-            </div>
+    <div class="container box">
+        <div class="create-box create-box-item-1">
+            <h1>Create Box</h1>
+        </div>
+
+        <div class="create-box create-box-item-2">
+            <label for="question">Question: </label>
             <br>
-            <div>
-                <label for="answer" style="font-size: 20px; font-weight: bold;">Answer</label>
-                <textarea name="answer" id="answer" cols="30" rows="2"></textarea>    
-            </div>
-            <div>
-                <button class="button" type="submit">Save</button>
-                <button class="button" type="submit">Close</buttont>
-            </div>
+            <input name="question inputbox" id="question" type="text"></input>    
+        </div>
+
+        <div class="create-box create-box-item-3">
+            <label for="answer">Answer: </label>
+            <br>
+            <input name="answer inputbox" id="answer" type="text"></input>    
+        </div>
+        
+        <div class="create-box create-box-item-4">
+            <button class="button" type="submit">Save</button>
+            <button class="button" type="submit">Close</buttont>
         </div>
     </div>
     
-    <div class="container light" id="card">
-        <div class="cards">
-            <div>#1</div>
-            <div>#2</div>
-            <div>#3</div>
-        </div>
+    <div class="container card light">
+            <div class="card-item card-item-1">
+                <span class="number">#1</span>
+                <hr>
+                <span>Q: what color is the sky?</span>
+                <span>A: Blue</span>
+            </div>
+            <div class="card-item card-item-1">
+                <span class="number">#2</span>
+                <hr>
+                <span>Q: what color is the sky?</span>
+                <span>A: Blue</span>
+            </div>
+            <div class="card-item card-item-1">
+                <span class="number">#3</span>
+                <hr>
+                <span>Q: what color is the sky?</span>
+                <span>A: Blue</span>
+            </div>
+            <div class="card-item card-item-1">
+                <span class="number">#4</span>
+                <hr>
+                <span>Q: what color is the sky?</span>
+                <span>A: Blue</span>
+            </div>
+
     </div> 
 
     <script src="./project-01-assets/app.js"></script>
