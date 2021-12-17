@@ -83,3 +83,14 @@ input[type=text]{
 	color:lightcoral;
 }
 
+.btncard{
+	padding: 5px 8px;
+	font-size: 10px;
+}
+
+.answerspan{
+	display: none;
+}
+
+
+
