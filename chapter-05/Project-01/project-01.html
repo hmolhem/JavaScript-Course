@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./project-01-assets/reset.css">
-    <link rel="stylesheet" href="./project-01-assets/style.css">
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
 
     <title>Flash Card</title>
 </head>
@@ -51,16 +51,16 @@
             <div class="card-item card-item-1">
                 <span class="number">#1</span>
                 <hr>
-                <span>Q: what color is the sky?</span>
+                <span class="question">Q: what color is the sky?</span>
                 <span class="answerspan" style="visibility: hidden;">A: Blue</span>
-                <button class="button btncard" type="submit" onclick="toggle(this)">Show Answer</button>
-                <button class="button btncard" type="submit">Edit question</button>
-                <button class="button btncard" type="submit">Delete question</button>
+                <button class="button btncard showhide" type="submit" onclick="toggle(this)">Show Answer</button>
+                <button class="button btncard edit" type="submit">Edit question</button>
+                <button class="button btncard delete" type="submit">Delete question</button>
             </div>
             <div class="card-item card-item-1">
                 <span class="number">#2</span>
                 <hr>
-                <span>Q: what color is the sky?</span>
+                <span class="question">Q: what color is the sky?</span>
                 <span class="answerspan" style="visibility: hidden;">A: Blue</span>
                 <button class="button btncard" type="submit">Show Answer</button>
                 <button class="button btncard" type="submit">Edit question</button>
@@ -69,7 +69,7 @@
             <div class="card-item card-item-1">
                 <span class="number">#3</span>
                 <hr>
-                <span>Q: what color is the sky?</span>
+                <span class="question">Q: what color is the sky?</span>
                 <span class="answerspan" style="visibility: hidden;">A: Blue</span>
                 <button class="button btncard" type="submit">Show Answer</button>
                 <button class="button btncard" type="submit">Edit question</button>
@@ -78,7 +78,7 @@
             <div class="card-item card-item-1">
                 <span class="number">#4</span>
                 <hr>
-                <span>Q: what color is the sky?</span>
+                <span class="question">Q: what color is the sky?</span>
                 <span class="answerspan" style="visibility: hidden;">A: Blue</span>
                 <button class="button btncard" type="submit">Show Answer</button>
                 <button class="button btncard" type="submit">Edit question</button>
@@ -87,6 +87,6 @@
 
     </div> 
 
-    <script src="./project-01-assets/app.js"></script>
+    <script src="./project-01.js"></script>
 </body>
 </html>

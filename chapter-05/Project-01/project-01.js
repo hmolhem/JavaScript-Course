@@ -1,0 +1,6 @@
+myFlashcardModle = (function(){
+
+    
+
+
+})();
