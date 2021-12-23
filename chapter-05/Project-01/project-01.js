@@ -1,6 +1,0 @@
-myFlashcardModle = (function(){
-
-    
-
-
-})();
