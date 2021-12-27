@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+}
+div{
+    text-align: center;
+}
+#peopleModule{
+    margin: 10px;
+}
+#peopleModule button{
+    padding: 10px;
+    margin: 5px;
+}
+#peopleModule input{
+    padding: 10px;
+    margin: 10px;
+}
+
+#peopleModule ul li{
+    list-style-type: none;
+}
+
+#peopleModule ul li span{
+    margin-top: 10px;
+    background-color: #bdf9f9;
+    border-radius: 3px;
+    padding: 5px 70px 5px 70px;
+    font-size: 25px;
+    border-radius: 3px;
+    position: absolute;
+}
+#peopleModule ul li i{
+    background: rgb(236, 236, 236);
+    padding: 5px;
+    position: relative;
+    top: 21px;
+    left: 145px;
+    border-radius: 20px;
+}
+
+#peopleModule ul li i:hover{
+    background: rgb(216, 216, 216);
+    mouse
+}
