@@ -7,7 +7,7 @@ var myFlashcardMoudle = (function(){
     boxModule.unhideCreateBox();
     cardInfo.createCard(1,'Q: what color is the sky?','A: Blue');
     // cardInfo.cardSense();
-    cardInfo.toggle();
-
+    // cardInfo.toggleShowHideAnswer();
+    cardInfo.deleteCard();
 
 })();

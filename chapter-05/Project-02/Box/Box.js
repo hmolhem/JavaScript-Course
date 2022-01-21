@@ -1,4 +1,4 @@
-import cardInfo from './../card/card.js';
+import cardInfo from '../Card/Card.js';
 var boxModule = (function (){
     
     let hideCreateBox = function(){
@@ -40,7 +40,7 @@ var boxModule = (function (){
 
 })();
 
-boxModule.saveCard();
+// boxModule.saveCard();
 // boxModule.hideCreateBox();
 export default boxModule;
 
