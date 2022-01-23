@@ -1,0 +1,1 @@
+import cartinfo from './cartApp/cardinfo.js';
