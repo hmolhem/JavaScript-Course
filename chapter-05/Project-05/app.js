@@ -20,29 +20,31 @@ data = {
 
 const result = document.querySelector('.result');
 const dialog = document.querySelector('.dialog');
-
-dialog.addEventListener('close', (event) => {
-    result.textContent = 'dialog was closed';
-});
-
 const openDialog = document.querySelector('#showModalBtn');
+const closeButton = document.querySelector('#close');
+const question = document.querySelector('#question');
+const answer = document.querySelector('#answer');
+const saveModalButton = document.querySelector('#save');
+var  cardBodyArray = document.querySelectorAll('.card-body');
+
+// dialog.addEventListener('close', (event) => {
+    //     result.textContent = 'dialog was closed';
+    // });
+
 openDialog.addEventListener('click', () => {
   if (typeof dialog.showModal === 'function') {
       dialog.showModal();
       result.textContent = '';
   } else {
-      result.textContent = 'The dialog API is not supported by this browser';
+    //   result.textContent = 'The dialog API is not supported by this browser';
+    alert('The dialog API is not supported by this browser');
   }
 });
 
-const closeButton = document.querySelector('#close');
 closeButton.addEventListener('click', () => {
     dialog.close();
 });
 
-const question = document.querySelector('#question');
-const answer = document.querySelector('#answer');
-const saveModalButton = document.querySelector('#save');
 
 question.addEventListener('click', event =>{
     console.log(event.target.value);
@@ -51,15 +53,29 @@ answer.addEventListener('click',(event)=>{
     console.log(event.target.tagName);
 });
 
+
 saveModalButton.addEventListener('click',(event)=>{
     // console.log(event.target.tagName);
-    console.log(question.value);
-    console.log(answer.value);
+    // console.log(question.value);
+    // console.log(answer.value);
+    // console.log(data.cardContent.length);
+    let tempObject = {id:data.cardContent.length+1, 
+                        question:question.value,
+                        answer: answer.value
+                        };
+
+    console.log(tempObject);
+    data.cardContent.push(tempObject);
+
+    var template = document.getElementById('template').innerHTML;
+    rendered = Mustache.render(template, data);
+    document.getElementById('target').innerHTML = rendered;
+
 });
 
-var template = document.getElementById('template').innerHTML;
-var rendered = Mustache.render(template, data);
-document.getElementById('target').innerHTML = rendered;
+// var template = document.getElementById('template').innerHTML;
+// var rendered = Mustache.render(template, data);
+// document.getElementById('target').innerHTML = rendered;
 
 
 // const showAnswer = document.querySelectorAll('#showAnswer');
@@ -69,10 +85,8 @@ function showHideAnswer() {
     window.alert('Hello');
 }
 
-
-let  cardBodyArray = document.querySelectorAll('.card-body');
-
 cardBodyArray.forEach((card,index) => {
+
     let  ps = card.querySelectorAll('p');
     card.addEventListener('click', event =>{
 
