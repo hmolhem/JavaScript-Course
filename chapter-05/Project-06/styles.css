@@ -1,0 +1,19 @@
+.card{
+    width: 350px;
+    margin-top: 10px;
+}
+.card-body p{
+    font-size: 18px;
+}
+.card-body span{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.card-body #spanAnswer{
+    visibility: hidden;
+}
+.card-body button{
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 10px;
+}

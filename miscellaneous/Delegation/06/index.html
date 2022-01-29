@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation</title>
+</head>
+
+<body>
+
+    <h1>A Simple Explanation of Event Delegation in JavaScript</h1>
+    <a href="https://dmitripavlutin.com/javascript-event-delegation/">Dmitri Pavlutin</a>
+    <hr>
+    <h2>Example 1:</h2>
+    <button id="buttonId">Click me</button>
+
+    <hr>
+
+    <h2>Example 2</h2>
+    <div id="buttons">
+        <button class="buttonClass">Click me</button>
+        <button class="buttonClass">Click me</button>
+        <!-- buttons... -->
+        <button class="buttonClass">Click me</button>
+    </div>
+
+    <p>Is there a better approach?</p>
+    <p>Fortunately, when using the <b>event delegation pattern</b>, listening for events on multiple elements requires
+        just one event listener</p>
+    <p>The <b>event delegation</b> uses specifics of <b>event propagation</b> mechanism. To understand how event
+        delegation works, <mark>I recommend understanding the event propagation first</mark>.</p>
+    <ol>
+        <li><em>Capture</em></li>
+        <li><em>Target Phase</em></li>
+        <li><em>Bubble Phase</em></li>
+    </ol>
+
+    <hr>
+    <h1>Event delegation</h1>
+    <div id="buttons">
+        <!-- Step 1 -->
+        <button class="buttonClass">Click me</button>
+        <button class="buttonClass">Click me</button>
+        <!-- buttons... -->
+        <button class="buttonClass">Click me</button>
+    </div>
+
+    <ol>
+        <li><b>Step 1. Determine the parent of elements to watch for events</b></li>
+        <li><b>Step 2. Attach the event listener to the parent element</b></li>
+        <li><b>Step 3. Use event.target to select the target element</b></li>
+    </ol>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
