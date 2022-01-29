@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <h1>AddEventListener</h1>
+    <br>
+    <h2>The syntax to add a handler:</h2>
+    <p>element.<b style="color:rgb(255, 118, 118);">addEventListener</b> (event, handler, [option]);</p>
+
+    <ul>
+        <li>event: Event name, e.g. "click".</li>
+        <li>handler: The handler function.</li>
+        <li>options: 
+            <ul>
+                <li>once: if true, then the listener is automatically removed after it triggers.</li>
+                <li>capture: the phase where to handle the event, to be covered later in the chapter Bubbling and capturing. For historical reasons, options can also be false/true, that’s the same as {capture: false/true}.</li>
+                <li>passive: if true, then the handler will not call preventDefault(), we’ll explain that later in Browser default actions.</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <input id="elem" type="button" value="Click me"/>
+
+    <script>
+      function handler1() {
+        alert('Thanks!');
+      };
+    
+      function handler2() {
+        alert('Thanks again!');
+      }
+    
+      elem.onclick = () => alert("Hello");
+      elem.addEventListener("click", handler1); // Thanks!
+      elem.addEventListener("click", handler2); // Thanks again!
+    </script>
+
+</body>
+</html>

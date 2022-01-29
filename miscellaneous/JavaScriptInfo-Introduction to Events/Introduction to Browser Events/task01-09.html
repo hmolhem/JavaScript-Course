@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <h1>Hide on click</h1>
+  <input type="button" value="Click Here" id="hider">
+  <div id="text">text</div>
+
+  <script>
+      obj = {
+        handleEvent(){
+          text.hidden = true;
+        },
+      }
+
+      hider.addEventListener('click', obj);
+
+  </script>
+
+</body>
+
+</html>

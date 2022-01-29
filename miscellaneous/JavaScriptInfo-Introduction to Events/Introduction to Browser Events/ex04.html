@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Are we assign two onclickc properties?</h1>
+    <p>As there’s only one onclick property, we can’t assign more than one event handler.</p>
+    <input type="button" value="Click me" id="elem" onclick="alert('HTML attribute active')">
+    
+    <p><b>To remove a handler - assign elem.onclick = null</b></p>
+    <script>
+        elem.onclick = function (){ // overwrites the existing handler
+            alert('DOM properties active'); // only this will be shown
+        }
+    </script>
+</body>
+</html>

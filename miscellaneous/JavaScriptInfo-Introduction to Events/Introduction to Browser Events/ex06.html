@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <h1>Possible mistakes 1</h1>
+    <button type="button" id="buttton">Click me </button>
+
+    <blockquote cite="https://javascript.info/introduction-browser-events">
+        <b>DOM-property case </b>
+        <br>
+        Assign a handler to elem.onclick, not elem.ONCLICK, because DOM properties are case-sensitive.
+    </blockquote>
+    <blockquote cite="https://javascript.info/introduction-browser-events">
+        <b>HTML attribute </b>
+        <br>
+        As we know, HTML attribute names are not case-sensitive, so ONCLICK works as well as onClick and onCLICK… But usually attributes are lowercased: onclick.
+    </blockquote>
+
+    <script>
+        function saythanks(){
+            alert('Thanks');
+        }
+
+        button.onclick = saythanks; //right
+        // button.onclick = saythanks(); // wromg
+
+    </script>
+</body>
+</html>
