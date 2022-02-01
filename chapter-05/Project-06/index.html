@@ -52,13 +52,13 @@
   <script id="template" type="x-tmpl-mustache">
     {{#cardContent}}
       <div class="card mr-3">
-        <h5 class="card-header">#{{id}}</h5>
+        <h5 id="header" class="card-header">#{{id}}</h5>
         <div class="card-body">
-          <p><b>Q:</b><span class="card-text">{{question}}?</span></p>
-          <p><b>A:</b><span id="spanAnswer"class="card-text">{{answer}}</span></p>
+          <p><b>Q:</b><span  id="spanQuestion" class="card-text" contenteditable="false">{{question}}</span></p>
+          <p><b>A:</b><span id="spanAnswer"class="card-text" contenteditable="false">{{answer}}</span></p>
           <button type="button" id="showAnswer" class="btn btn-primary">Show Answer</button>
           <button type="button" id="editQuestion" class="btn btn-primary">Edit Question</button>
-          <button type="button" id="deleteQuestion" class="btn btn-primary">Delete question</button>
+          <button type="button" id="deleteQuestion" class="btn btn-primary">Delete Question</button>
         </div>
       </div>
       {{/cardContent}}

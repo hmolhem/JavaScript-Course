@@ -71,12 +71,12 @@
     console.clear();
     var ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     log(ar); 
-    function removeRemove(arr, value) {
+    function remove(arr, value) {
         return arr.filter(idx => {
             return idx != value;
         });
     }
-    var result =  removeRemove(ar, 6);
+    var result =  remove(ar, 6);
     log(result);
     
     // Method #8
