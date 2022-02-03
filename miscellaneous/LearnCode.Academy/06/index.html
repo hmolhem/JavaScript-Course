@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Add People</title>
+</head>
+<body>
+    <div id="peopleModule">
+        <h1>People</h1>
+        <input type="button" id="addPerson"  value="Add Person">
+        <input type="text" id="textPerson" placeholder="name">
+    </div>
+    <div id="peopleCard">
+        <ul id="people"></ul>
+    </div>
+
+    <script id="people-template" type="x-tmpl-mustache">
+        {{#people}}
+            <li>
+                <span>{{.}}</span>
+                <i id="del" class="glyphicon glyphicon-remove"></i>
+            </li>
+        {{/people}}
+    </script>
+    <script src="./app.js"></script>
+</body>
+</html>
