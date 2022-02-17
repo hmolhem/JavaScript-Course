@@ -17,7 +17,7 @@ function loadEventListeners() {
 
   // Remove task event
   taskList.addEventListener("click", removeTask);
-  
+
   // Edit task event
   taskList.addEventListener("click", editTask);
 
@@ -38,8 +38,8 @@ function addTask(e) {
     // Add class
     li.className = "list-group-item d-flex align-items-center";
     // Create text node and append to li
-    const span = document.createElement('span');
-    span.className = 'textContent';
+    const span = document.createElement("span");
+    span.className = "textContent";
     li.appendChild(span);
     span.appendChild(document.createTextNode(taskInput.value));
 
@@ -52,7 +52,7 @@ function addTask(e) {
 
     // Append li to ul
     taskList.appendChild(li);
-    
+
     // Create second i element
     const iPen = document.createElement("i");
     // Add class
@@ -85,31 +85,36 @@ function removeTask(e) {
 }
 
 // Edit task
-function editTask(e){
-  if (e.target.classList.contains("pen-item")){
-
+function editTask(e) {
+  if (e.target.classList.contains("pen-item")) {
     const li = e.target.parentElement;
-    const span = li.querySelector('span');
-    span.setAttribute('contenteditable',true);
-    span.focus();
-
-    const newClass = 'fas fa-bookmark text-primary ml-2 bookmark-item';
-    const edit = e.target;
-    edit.className = newClass;
-
-    const previousSpanTextContent = span.textContent;
-    console.log(previousSpanTextContent);
-
-    span.addEventListener('DOMSubtreeModified', ()=>{
-      console.log('Hello');
-    })
+    e.target.className = "fas fa-bookmark text-primary ml-2 bookmark-item";
     
+    const span = li.firstElementChild;
+    span.setAttribute("contenteditable", true);
+    span.focus();
+    const oldTask = e.target.parentElement.firstElementChild.textContent;
+
+    // span.addEventListener('DOMSubtreeModified', (e)=>{
+    //   console.log('Hello');
+    // })
+    
+    span.addEventListener("focusout", () => {
+      span.blur();
+      span.setAttribute("contenteditable", false);
+      e.target.className = "fas fa-pen text-primary ml-2 pen-item";
+      const newTask = e.target.parentElement.firstElementChild.textContent;
+
+      let arrayTask = JSON.parse(localStorage.getItem("tasks"));
+      const idx = arrayTask.indexOf(oldTask);
+      if (idx !== -1) {
+        arrayTask[idx] = newTask;
+      }
+      localStorage.setItem("tasks", JSON.stringify(arrayTask));
+    });
   }
-
-
+  
 }
-
-
 
 // Clear task
 function clearTask() {
@@ -170,8 +175,8 @@ function getTasks() {
     // Create text node and append to li
     // li.appendChild(document.createTextNode(task));
 
-    const span = document.createElement('span');
-    span.className = 'textContent';
+    const span = document.createElement("span");
+    span.className = "textContent";
     li.appendChild(span);
     span.appendChild(document.createTextNode(task));
 
@@ -184,7 +189,7 @@ function getTasks() {
 
     // Append li to ul
     taskList.appendChild(li);
-    
+
     // Create second i element
     const iPen = document.createElement("i");
     // Add class
@@ -214,7 +219,6 @@ function removeTaskFromLocalStorage(taskItem) {
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-
 
 // Clear Tasks from LS
 function clearTasksFromLocalStorage() {
