@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <title>Project Chapter 6</title>
+  </head>
+  <body>
+    <div class="section mt-5" id="first">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-8">
+            <div class="header">
+              <h2>To-Do-List Project</h2>
+            </div>
+            <div id="main" class="card">
+              <div class="card-body">
+                <form id="task-form" action="#">
+                  <div class="form-group">
+                    <label for="task">Create Task</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="task"
+                      id="task"
+                      placeholder="Enter your task ..."
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Add task
+                  </button>
+                </form>
+
+                <hr />
+
+                <h5>All Tasks</h5>
+                <div class="form-group">
+                  <label for="filter">Filter Tasks!</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="filter"
+                    id="filter"
+                    placeholder="Tasks..."
+                  />
+                </div>
+
+                <div>
+                  <ul class="list-group pr-0">
+                    <!-- <li class="list-group-item d-flex align-items-center">
+                      <input
+                        class="bg-white border-0"
+                        size="50px"
+                        maxlength="50px"
+                        type="text"
+                        id="task"
+                        value="Task 1"
+                        disabled
+                      />
+                      <i class="fas fa-times text-danger ml-auto delete-item"></i>
+                      <i class="fas fa-pen text-primary ml-2 pen-item"></i>
+                    </li> -->
+                  </ul>
+                </div>
+
+                <button type="submit" class="clear-tasks btn btn-danger mt-3">
+                  Clear all tasks
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
