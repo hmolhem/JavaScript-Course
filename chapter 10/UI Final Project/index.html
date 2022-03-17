@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>آزمون تستی</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                <div class="title">
+                    <span class="border-bottom border-success py-1 px-5">برای آزمون آماده‌ای؟ اگر آره روی کلید شروع آزمون کلیک کن</span>
+                    <button type="button" class="btn btn-outline-success" id="stratQuiz">شروع آزمون</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-none">  <!-- add dnone for hide this section -->
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="infoBox mt-3">
+                    <div class="card" style="width:35rem">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">قوانین آزمون</h4>
+                            <h6 class="card-title">به نکات زیر توجه کنید</h6>
+                            <hr>
+                            <ol class="card-text">
+                                <li>سوالات به صورت تستی ارائه شده است.</li>
+                                <li>برای هر سوال ۱۵ ثانیه وقت دارید.</li>
+                                <li>هر سوال ۵ امتیاز دارد.</li>
+                                <li>بعد از شروع آزمون امکان کنسل کردن آزمون را ندارید.</li>
+                                <li>نتیجه آزمون در انتهای آزمون به شما اعلام خواهد شد.</li>
+                            </ol>
+                            <hr>
+                            <a href="#" class="card-link mr-2 btn btn-outline-success">شروع</a>
+                            <a href="#" class="card-link mr-5 btn btn-outline-danger">نمی‌خواهم در آزمون شرکت کنم</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container bg-light mt-3">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <div class="infoBox my-3">
+                    <div class="card " style="width:35rem">
+                        <div class="card-body">
+                            <div class="card-title d-flex justify-content-between">
+                                <span class="border bg-light p-2 text-dark">سوال ۱ </span>
+                                <div class="timer d-flex">
+                                    <span class="border bg-light p-2 text-dark">زمان باقیمانده</span>
+                                    <span class="mr-2 p-2 border bg-light text-dark">۱۵</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="question">
+                                <h5>اچ‌تی‌ام‌ال مخفف چیست؟</h5>
+                            </div>
+                            <hr>
+                            <div class="card-text">
+                                <div class="alert alert-success d-flex justify-content-between">
+                                    <span>Hyper Text Markup Language</span>
+                                    <span><i class="far fa-check-circle"></i></span>                                  
+                                </div>
+                                <div class="alert alert-danger d-flex justify-content-between">
+                                    <span>Hyperlinks and Text Markup Language</span>
+                                    <span><i class="far fa-times-circle"></i></span>                                  
+                                </div>
+                                <div class="alert alert-danger d-flex justify-content-between">
+                                    <span>Home Tool Markup Langauge</span>
+                                </div>
+                                <div class="alert alert-danger d-flex justify-content-between">
+                                    <span>هیچکدام صحیح نیست</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <span class="border bg-light p-2 text-info">سوال ۱ از ۵</span>
+                                <button class="card-link btn btn-success">سوال بعدی</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
